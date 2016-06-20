@@ -17,8 +17,8 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        workButton.backgroundColor = UIColor.orangeColor()
-
+        workButton.backgroundColor = UIColor.init(red: 0.173, green: 0.431, blue: 0.522, alpha: 1.0)
+        //(red: 0.5, green: 0.5, blue: 2.0, alpha: 1.0)
         navigationController?.navigationBarHidden = true
         // Do any additional setup after loading the view.
     }
