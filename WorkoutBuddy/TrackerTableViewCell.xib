@@ -20,22 +20,22 @@
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="W/Reps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUo-0J-VSG">
-                        <rect key="frame" x="91" y="11" width="53" height="30"/>
+                        <rect key="frame" x="90" y="11" width="53" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="W/Reps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vYG-QD-hd1">
-                        <rect key="frame" x="143" y="11" width="51" height="30"/>
+                        <rect key="frame" x="149" y="11" width="51" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="W/Reps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O3G-RN-QqH">
-                        <rect key="frame" x="194" y="11" width="51" height="30"/>
+                        <rect key="frame" x="206" y="11" width="51" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="W/Reps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qlw-g7-cmf">
-                        <rect key="frame" x="245" y="11" width="51" height="30"/>
+                        <rect key="frame" x="263" y="11" width="51" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>

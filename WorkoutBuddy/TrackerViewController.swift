@@ -13,6 +13,7 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var listenButton: UIButton!
     @IBOutlet weak var workButton: UIButton!
     @IBOutlet weak var motivateButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,15 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
         //(red: 0.5, green: 0.5, blue: 2.0, alpha: 1.0)
         navigationController?.navigationBarHidden = true
         // Do any additional setup after loading the view.
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        self.tableView.allowsMultipleSelectionDuringEditing = false
+        
+        self.tableView.registerClass(TrackerTableViewCell.self, forCellReuseIdentifier: "TrackerTableViewCell")
+        
+        self.navigationController!.navigationBar.hidden = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,10 +38,14 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Dispose of any resources that can be recreated.
     }
     
+    func setDate() {
+        
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //something like this for when my custom tableview cell is created
-        //let cell = tableView.dequeueReusableCellWithIdentifier("PlaceTableViewCell", forIndexPath: indexPath) as! PlaceTableViewCell
-        return UITableViewCell() //so I can build
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("TrackerTableViewCell", forIndexPath: indexPath) as! TrackerTableViewCell
+        return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="listenButton" destination="naB-6X-cNu" id="WHb-Nc-a9A"/>
                 <outlet property="motivateButton" destination="rpj-vx-Ptt" id="U43-QM-7V9"/>
+                <outlet property="tableView" destination="qzc-Be-6Oh" id="vT0-Vg-9Bn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="workButton" destination="rrA-tj-Lon" id="88e-fs-3F9"/>
             </connections>

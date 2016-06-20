@@ -18,6 +18,8 @@
 		8D4D7E381D184AF700366346 /* TrackerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4D7E361D184AF700366346 /* TrackerTableViewCell.xib */; };
 		8D4D7E3B1D18835400366346 /* TrackerDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7E391D18835400366346 /* TrackerDateViewController.swift */; };
 		8D4D7E3C1D18835400366346 /* TrackerDateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4D7E3A1D18835400366346 /* TrackerDateViewController.xib */; };
+		8D4D7E3F1D18A70B00366346 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7E3E1D18A70B00366346 /* Day.swift */; };
+		8D4D7E411D18A94800366346 /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7E401D18A94800366346 /* Exercises.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		8D4D7E361D184AF700366346 /* TrackerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackerTableViewCell.xib; sourceTree = "<group>"; };
 		8D4D7E391D18835400366346 /* TrackerDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerDateViewController.swift; sourceTree = "<group>"; };
 		8D4D7E3A1D18835400366346 /* TrackerDateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackerDateViewController.xib; sourceTree = "<group>"; };
+		8D4D7E3E1D18A70B00366346 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		8D4D7E401D18A94800366346 /* Exercises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 		8D4D7DF01D17E7E800366346 = {
 			isa = PBXGroup;
 			children = (
+				8D4D7E3D1D18A67100366346 /* Models */,
 				8D4D7DFB1D17E7E800366346 /* WorkoutBuddy */,
 				8D4D7DFA1D17E7E800366346 /* Products */,
 			);
@@ -89,6 +94,15 @@
 			);
 			name = Tracker;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		8D4D7E3D1D18A67100366346 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8D4D7E3E1D18A70B00366346 /* Day.swift */,
+				8D4D7E401D18A94800366346 /* Exercises.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +182,8 @@
 			files = (
 				8D4D7E371D184AF700366346 /* TrackerTableViewCell.swift in Sources */,
 				8D4D7E151D17F5AC00366346 /* TrackerViewController.swift in Sources */,
+				8D4D7E3F1D18A70B00366346 /* Day.swift in Sources */,
+				8D4D7E411D18A94800366346 /* Exercises.swift in Sources */,
 				8D4D7E101D17E89E00366346 /* LandingViewController.swift in Sources */,
 				8D4D7E3B1D18835400366346 /* TrackerDateViewController.swift in Sources */,
 				8D4D7DFD1D17E7E800366346 /* AppDelegate.swift in Sources */,

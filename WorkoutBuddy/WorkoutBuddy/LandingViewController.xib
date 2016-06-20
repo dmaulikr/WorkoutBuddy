@@ -25,8 +25,9 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="141" id="LCc-Cv-1Jz"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
                     <state key="normal" title="WORKOUT BUDDY">
+                        <color key="titleColor" red="0.062745098040000002" green="0.23921568630000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
