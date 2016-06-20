@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LandingViewController" customModule="WorkoutBuddy" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundImage" destination="G3S-Gl-fiO" id="zp2-zI-mzl"/>
+                <outlet property="enterButton" destination="e9j-hA-OKC" id="5pp-gY-uEC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,12 +21,12 @@
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9j-hA-OKC">
-                    <rect key="frame" x="182" y="229" width="235" height="141"/>
+                    <rect key="frame" x="183" y="229" width="235" height="141"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="141" id="LCc-Cv-1Jz"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
-                    <state key="normal" title="Workout Buddy">
+                    <state key="normal" title="WORKOUT BUDDY">
                         <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>

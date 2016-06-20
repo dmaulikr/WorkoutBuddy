@@ -14,6 +14,10 @@
 		8D4D7E111D17E89E00366346 /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4D7E0F1D17E89E00366346 /* LandingViewController.xib */; };
 		8D4D7E151D17F5AC00366346 /* TrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7E131D17F5AC00366346 /* TrackerViewController.swift */; };
 		8D4D7E161D17F5AC00366346 /* TrackerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4D7E141D17F5AC00366346 /* TrackerViewController.xib */; };
+		8D4D7E371D184AF700366346 /* TrackerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7E351D184AF700366346 /* TrackerTableViewCell.swift */; };
+		8D4D7E381D184AF700366346 /* TrackerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4D7E361D184AF700366346 /* TrackerTableViewCell.xib */; };
+		8D4D7E3B1D18835400366346 /* TrackerDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7E391D18835400366346 /* TrackerDateViewController.swift */; };
+		8D4D7E3C1D18835400366346 /* TrackerDateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4D7E3A1D18835400366346 /* TrackerDateViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		8D4D7E0F1D17E89E00366346 /* LandingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandingViewController.xib; sourceTree = "<group>"; };
 		8D4D7E131D17F5AC00366346 /* TrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerViewController.swift; sourceTree = "<group>"; };
 		8D4D7E141D17F5AC00366346 /* TrackerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackerViewController.xib; sourceTree = "<group>"; };
+		8D4D7E351D184AF700366346 /* TrackerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerTableViewCell.swift; sourceTree = "<group>"; };
+		8D4D7E361D184AF700366346 /* TrackerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackerTableViewCell.xib; sourceTree = "<group>"; };
+		8D4D7E391D18835400366346 /* TrackerDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerDateViewController.swift; sourceTree = "<group>"; };
+		8D4D7E3A1D18835400366346 /* TrackerDateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackerDateViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +80,12 @@
 		8D4D7E121D17F58B00366346 /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				8D4D7E391D18835400366346 /* TrackerDateViewController.swift */,
+				8D4D7E3A1D18835400366346 /* TrackerDateViewController.xib */,
 				8D4D7E131D17F5AC00366346 /* TrackerViewController.swift */,
 				8D4D7E141D17F5AC00366346 /* TrackerViewController.xib */,
+				8D4D7E351D184AF700366346 /* TrackerTableViewCell.swift */,
+				8D4D7E361D184AF700366346 /* TrackerTableViewCell.xib */,
 			);
 			name = Tracker;
 			path = ..;
@@ -141,7 +153,9 @@
 				8D4D7E111D17E89E00366346 /* LandingViewController.xib in Resources */,
 				8D4D7E161D17F5AC00366346 /* TrackerViewController.xib in Resources */,
 				8D4D7E071D17E7E800366346 /* LaunchScreen.storyboard in Resources */,
+				8D4D7E3C1D18835400366346 /* TrackerDateViewController.xib in Resources */,
 				8D4D7E041D17E7E800366346 /* Assets.xcassets in Resources */,
+				8D4D7E381D184AF700366346 /* TrackerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,8 +166,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D4D7E371D184AF700366346 /* TrackerTableViewCell.swift in Sources */,
 				8D4D7E151D17F5AC00366346 /* TrackerViewController.swift in Sources */,
 				8D4D7E101D17E89E00366346 /* LandingViewController.swift in Sources */,
+				8D4D7E3B1D18835400366346 /* TrackerDateViewController.swift in Sources */,
 				8D4D7DFD1D17E7E800366346 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +318,7 @@
 				8D4D7E0D1D17E7E800366346 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

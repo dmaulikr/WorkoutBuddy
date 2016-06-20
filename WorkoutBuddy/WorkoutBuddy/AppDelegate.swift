@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var landingNavController : UINavigationController?
     
-    var trackertNavController : UINavigationController?
+    var trackerDateNavController : UINavigationController?
     
     var musicNavController : UINavigationController?
     
@@ -37,9 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func navigateToTracker(){
-        let tvc = TrackerViewController(nibName : "TrackerViewController" , bundle : nil)
-        trackertNavController = UINavigationController(rootViewController: tvc)
-        self.window?.rootViewController = trackertNavController
+        let tdvc = TrackerDateViewController(nibName : "TrackerDateViewController" , bundle : nil)
+        trackerDateNavController = UINavigationController(rootViewController: tdvc)
+        self.window?.rootViewController = trackerDateNavController
         
     }
     func navigateToMusic(){

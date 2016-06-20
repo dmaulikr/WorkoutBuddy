@@ -1,5 +1,5 @@
 //
-//  LandingViewController.swift
+//  TrackerDateViewController.swift
 //  WorkoutBuddy
 //
 //  Created by Erik Roberts on 6/20/16.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-class LandingViewController: UIViewController {
+class TrackerDateViewController: UIViewController {
 
-    @IBOutlet weak var backgroundImage: UIImageView!
-    @IBOutlet weak var enterButton: UIButton!
+    @IBOutlet weak var myDatePicker: UIDatePicker!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var goButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,10 +25,14 @@ class LandingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func enterButtonTapped(sender: UIButton) {
-        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate //as! casts this returned value to type AppDelegate
-        
-        appDelegate.navigateToTracker()
+    
+    @IBAction func lockInButtonTapped(sender: UIButton) {
+         dateLabel.text = NSDateFormatter.localizedStringFromDate(myDatePicker.date, dateStyle: NSDateFormatterStyle.FullStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
+    }
+    
+    @IBAction func goButtonTapped(sender: UIButton) {
+        let tvc = TrackerViewController(nibName: "TrackerViewController", bundle: nil)
+        navigationController?.pushViewController(tvc, animated: true)
     }
 
     /*
