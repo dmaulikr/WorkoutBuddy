@@ -20,8 +20,13 @@
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9j-hA-OKC">
                     <rect key="frame" x="182" y="229" width="235" height="141"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="141" id="LCc-Cv-1Jz"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
-                    <state key="normal" title="Workout Buddy"/>
+                    <state key="normal" title="Workout Buddy">
+                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="enterButtonTapped:" destination="-1" eventType="touchUpInside" id="ixA-QE-HUk"/>
                     </connections>
@@ -29,14 +34,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="G3S-Gl-fiO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1jc-0Z-2KV"/>
-                <constraint firstAttribute="bottom" secondItem="e9j-hA-OKC" secondAttribute="bottom" constant="230" id="3Wf-j6-8r2"/>
-                <constraint firstAttribute="bottom" secondItem="G3S-Gl-fiO" secondAttribute="bottom" id="Cad-9r-7ub"/>
-                <constraint firstItem="e9j-hA-OKC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="229" id="EBW-56-vbw"/>
-                <constraint firstItem="G3S-Gl-fiO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Lyh-93-xVv"/>
-                <constraint firstAttribute="trailing" secondItem="G3S-Gl-fiO" secondAttribute="trailing" id="SWT-2z-zBS"/>
-                <constraint firstAttribute="trailing" secondItem="e9j-hA-OKC" secondAttribute="trailing" constant="183" id="X6m-7H-Zio"/>
-                <constraint firstItem="e9j-hA-OKC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="182" id="qem-Zy-2an"/>
+                <constraint firstAttribute="trailing" secondItem="G3S-Gl-fiO" secondAttribute="trailing" id="0bT-mU-NFE"/>
+                <constraint firstItem="G3S-Gl-fiO" firstAttribute="centerX" secondItem="e9j-hA-OKC" secondAttribute="centerX" id="DXj-As-YBd"/>
+                <constraint firstItem="G3S-Gl-fiO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WVU-ts-96m"/>
+                <constraint firstItem="G3S-Gl-fiO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="leR-jl-wfa"/>
+                <constraint firstItem="G3S-Gl-fiO" firstAttribute="centerY" secondItem="e9j-hA-OKC" secondAttribute="centerY" id="tJ3-tH-tbC"/>
+                <constraint firstAttribute="bottom" secondItem="G3S-Gl-fiO" secondAttribute="bottom" id="upN-Ft-MKK"/>
             </constraints>
         </view>
     </objects>

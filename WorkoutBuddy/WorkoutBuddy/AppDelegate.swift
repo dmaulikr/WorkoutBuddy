@@ -32,14 +32,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func navigateToLVC(){
         let lvc = LandingViewController(nibName: "LandingViewController", bundle: nil)
-        landingNavController = UINavigationController(nibName: "lvc", bundle: nil)
-        self.window?.rootViewController = lvc
+        landingNavController = UINavigationController(rootViewController: lvc)
+        self.window?.rootViewController = landingNavController
     }
     
     func navigateToTracker(){
-        //let tvc = TrackerViewController(nibName : "TrackerViewController" , bundle : nil)
-        //trackertNavController = UINavigationController(nibName: "tvc", bundle: nil)
-        //self.window?.rootViewController =
+        let tvc = TrackerViewController(nibName : "TrackerViewController" , bundle : nil)
+        trackertNavController = UINavigationController(rootViewController: tvc)
+        self.window?.rootViewController = trackertNavController
         
     }
     func navigateToMusic(){

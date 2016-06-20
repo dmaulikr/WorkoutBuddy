@@ -14,7 +14,7 @@ class LandingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        //a
+        
     }
 
     override func didReceiveMemoryWarning() {

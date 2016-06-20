@@ -13,6 +13,7 @@ class TrackerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.navigationBarHidden = true
         // Do any additional setup after loading the view.
     }
 
