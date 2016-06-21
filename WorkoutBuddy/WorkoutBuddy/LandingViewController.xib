@@ -47,6 +47,6 @@
         </view>
     </objects>
     <resources>
-        <image name="landingBackground" width="275" height="183"/>
+        <image name="landingBackground" width="1085" height="2048"/>
     </resources>
 </document>

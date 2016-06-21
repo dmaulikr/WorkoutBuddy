@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrackerViewController" customModule="WorkoutBuddy" customModuleProvider="target">
             <connections>
+                <outlet property="dateLabel" destination="sAH-k0-ZZR" id="ZRD-cK-vGT"/>
                 <outlet property="listenButton" destination="naB-6X-cNu" id="WHb-Nc-a9A"/>
                 <outlet property="motivateButton" destination="rpj-vx-Ptt" id="U43-QM-7V9"/>
                 <outlet property="tableView" destination="qzc-Be-6Oh" id="vT0-Vg-9Bn"/>
@@ -29,6 +30,9 @@
                     <state key="normal" title="Listen">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="listenButtonTapped:" destination="-1" eventType="touchUpInside" id="m4P-Vt-jKR"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrA-tj-Lon" userLabel="Work">
                     <rect key="frame" x="200" y="550" width="200" height="50"/>

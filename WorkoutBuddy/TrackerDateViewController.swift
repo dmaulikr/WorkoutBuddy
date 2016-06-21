@@ -19,6 +19,7 @@ class TrackerDateViewController: UIViewController {
 
         navigationController?.navigationBarHidden = true
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,22 +29,19 @@ class TrackerDateViewController: UIViewController {
     
     
     @IBAction func lockInButtonTapped(sender: UIButton) {
+        
          dateLabel.text = NSDateFormatter.localizedStringFromDate(myDatePicker.date, dateStyle: NSDateFormatterStyle.FullStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
+    
+    }
+    
+    func getDate() -> String {
+//        return dateLabel.text!
+        return "so"
     }
     
     @IBAction func goButtonTapped(sender: UIButton) {
         let tvc = TrackerViewController(nibName: "TrackerViewController", bundle: nil)
         navigationController?.pushViewController(tvc, animated: true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

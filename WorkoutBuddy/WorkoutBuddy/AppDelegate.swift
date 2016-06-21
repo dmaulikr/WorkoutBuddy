@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var trackerDateNavController : UINavigationController?
     
-    var musicNavController : UINavigationController?
+    var listenNavController : UINavigationController?
     
-    var motivationNavController : UINavigationController?
+    var motivateNavController : UINavigationController?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.window = UIWindow(frame : UIScreen.mainScreen().bounds)
@@ -36,21 +36,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = landingNavController
     }
     
-    func navigateToTracker(){
+    func navigateToTracker() {
         let tdvc = TrackerDateViewController(nibName : "TrackerDateViewController" , bundle : nil)
         trackerDateNavController = UINavigationController(rootViewController: tdvc)
         self.window?.rootViewController = trackerDateNavController
         
     }
-    func navigateToMusic(){
-        //let muvc = MusicViewController(nibname: "MusicViewController" , bundle : nil)
-        //musicNavController = UINavigationController(nibName : "muvc" , bundle: nil)
-        //self.window?.rootViewController =
+    func navigateToMusic() {
+        let listenvc = SpotifyViewController(nibName: "SpotifyViewController" , bundle : nil)
+        listenNavController = UINavigationController(rootViewController : listenvc)
+        self.window?.rootViewController = listenNavController
     }
-    func navigateToMotivation(){
-        //let movc = MotivationViewController(nibName: "MotivationViewController" , bundle: nil)
-        //motivationNavController = UINavigationController(nibName: "movc", bundle: nil)
-        //self.window?.rootViewController =
+    func navigateToMotivation() {
+        let movc = MotivateViewController(nibName: "MotivateViewController" , bundle: nil)
+        motivateNavController = UINavigationController(rootViewController : movc)
+        self.window?.rootViewController = motivateNavController
         
     }
 
