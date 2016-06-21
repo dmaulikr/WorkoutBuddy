@@ -101,12 +101,10 @@
 		8D4D7E121D17F58B00366346 /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				8D4D7E391D18835400366346 /* TrackerDateViewController.swift */,
-				8D4D7E3A1D18835400366346 /* TrackerDateViewController.xib */,
 				8D4D7E131D17F5AC00366346 /* TrackerViewController.swift */,
 				8D4D7E141D17F5AC00366346 /* TrackerViewController.xib */,
-				8D4D7E351D184AF700366346 /* TrackerTableViewCell.swift */,
-				8D4D7E361D184AF700366346 /* TrackerTableViewCell.xib */,
+				8D4D7EEB1D19C47900366346 /* Custom Cell */,
+				8D4D7EEA1D19C46800366346 /* Date */,
 			);
 			name = Tracker;
 			path = ..;
@@ -150,6 +148,24 @@
 				8D4D7EDD1D1967D600366346 /* MotivateViewController.xib */,
 			);
 			name = Motivate;
+			sourceTree = "<group>";
+		};
+		8D4D7EEA1D19C46800366346 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				8D4D7E391D18835400366346 /* TrackerDateViewController.swift */,
+				8D4D7E3A1D18835400366346 /* TrackerDateViewController.xib */,
+			);
+			name = Date;
+			sourceTree = "<group>";
+		};
+		8D4D7EEB1D19C47900366346 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8D4D7E351D184AF700366346 /* TrackerTableViewCell.swift */,
+				8D4D7E361D184AF700366346 /* TrackerTableViewCell.xib */,
+			);
+			name = "Custom Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

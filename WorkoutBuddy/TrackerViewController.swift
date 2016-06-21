@@ -16,6 +16,11 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var dateLabel: UILabel!
     
+    var eTitle : String = ""
+    var eSet1 : Int = 0
+    var eSet2 : Int = 0
+    var eSet3 : Int = 0
+    var eSet4 : Int = 0
     
     override func viewWillAppear(animated: Bool) {
         tableView.reloadData()
@@ -44,9 +49,9 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
         setDate()
     }
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool { // return NO to not change text
-            return true
-    }
+//    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool { // return NO to not change text
+//            return true
+//    }
 
     @IBAction func listenButtonTapped(sender: UIButton) {
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate //as! casts this returned value to type AppDelegate
@@ -73,8 +78,22 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell = TrackerTableViewCell()
         }
         
+        eTitle = (cell?.setOneTextField.text)!
+        
+        print(eTitle)
+        //eSet1 = cell?.
+        
         print(cell)
         return cell!
+    }
+    @IBAction func iWorkedHardButtonTapped(sender: UIButton) {
+        //package the exercises up in an array to be shipped off the the exercises controller
+        
+        let exercise = Exercise()
+        
+        exercise.title = eTitle
+        
+        ExercisesController.sharedInstance.addExercises(exercise)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

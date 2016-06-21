@@ -10,6 +10,8 @@ import Foundation
 
 class ExercisesController {
     
+    var arrayOfExercises : [Exercise] = []
+    
     class var sharedInstance: ExercisesController {
         struct Static {
             static var instance:ExercisesController?
@@ -28,8 +30,14 @@ class ExercisesController {
         exercise.title = title
         
         
-        
         //PersistenceManager.saveObject(exercise, fileName: "MyExercise")
+    }
+    
+    func addExercises(exercise : Exercise) {
+        
+        arrayOfExercises.append(exercise)
+        
+        PersistenceManager.saveNSArray(arrayOfExercises, fileName: "arrayOfExercises")
     }
 
     
