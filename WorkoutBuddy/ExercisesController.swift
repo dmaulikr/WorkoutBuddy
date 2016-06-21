@@ -26,8 +26,8 @@ class ExercisesController {
     
     func createExercise(title: String) {
         //Receive the information that the user inputs
-        var exercise: Exercise = Exercise()
-        exercise.title = title
+        //var exercise: Exercise = Exercise()
+        //exercise.title = title
         
         
         //PersistenceManager.saveObject(exercise, fileName: "MyExercise")

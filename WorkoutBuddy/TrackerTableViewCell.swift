@@ -14,6 +14,7 @@ class TrackerTableViewCell: UITableViewCell, UITextInputTraits {
     @IBOutlet weak var setTwoTextField: UITextField!
     @IBOutlet weak var setThreeTextField: UITextField!
     @IBOutlet weak var setFourTextField: UITextField!
+    @IBOutlet weak var titleTextField: UITextField!
     
     //optional var keyboardType: UIKeyboardType
     

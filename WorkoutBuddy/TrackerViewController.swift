@@ -89,13 +89,46 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBAction func iWorkedHardButtonTapped(sender: UIButton) {
         //package the exercises up in an array to be shipped off the the exercises controller
         
-        let exercise = Exercise()
+        var exercise = Exercise()
+    
+        for index in 1...9  {
+            let indexPath:NSIndexPath = NSIndexPath(forRow: index, inSection: 1)
+            let cell = tableView.cellForRowAtIndexPath(indexPath) as! TrackerTableViewCell
+            
+            
+            
+            let indexEndOfText = cell.setOneTextField.text!.endIndex.advancedBy(-2) //this should get a substring of the weight for setOne CHECK FOR THE HYPHEN
+            let indexStartOfText = cell.setOneTextField.text!.startIndex.advancedBy(4) //this should get a substring of the rep for setOne hopefully skipping over the -
+            exercise.reps = (Int((cell.setOneTextField.text?.substringFromIndex(indexStartOfText))!))!
+            print(exercise.reps)
+            exercise.weight = (Int((cell.setTwoTextField.text?.substringToIndex(indexEndOfText))!))!
+            print(exercise.weight)
+            
+            let indexEndOfText2 = cell.setOneTextField.text!.endIndex.advancedBy(-2) //this should get a substring of the weight for setOne
+            let indexStartOfText2 = cell.setOneTextField.text!.startIndex.advancedBy(4) //this should get a substring of the rep for setOne hopefully skipping over the -
+            exercise.setTwoWeight = (Int((cell.setTwoTextField.text?.substringToIndex(indexEndOfText2))!))!
+            exercise.setTwoReps = (Int((cell.setTwoTextField.text?.substringFromIndex(indexStartOfText2))!))!
+            
+            let indexEndOfText3 = cell.setThreeTextField.text!.endIndex.advancedBy(-2) //this should get a substring of the weight for setOne
+            let indexStartOfText3 = cell.setThreeTextField.text!.startIndex.advancedBy(4) //this should get a substring of the rep for setOne hopefully skipping over the -
+            exercise.setThreeWeight = (Int((cell.setThreeTextField.text?.substringToIndex(indexEndOfText3))!))!
+            exercise.setThreeReps = (Int((cell.setThreeTextField.text?.substringFromIndex(indexStartOfText3))!))!
+            
+            let indexEndOfText4 = cell.setFourTextField.text!.endIndex.advancedBy(-2) //this should get a substring of the weight for setOne
+            let indexStartOfText4 = cell.setFourTextField.text!.startIndex.advancedBy(4) //this should get a substring of the rep for setOne hopefully skipping over the -
+            exercise.setFourWeight = (Int((cell.setFourTextField.text?.substringToIndex(indexEndOfText4))!))!
+            exercise.setFourReps = (Int((cell.setFourTextField.text?.substringFromIndex(indexStartOfText4))!))!
+
+
+            
+        }
         
-        exercise.title = eTitle
+        //exercise.title = eTitle
         
-        ExercisesController.sharedInstance.addExercises(exercise)
+        //ExercisesController.sharedInstance.addExercises(exercise)
     }
     
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //create an object for the tableview and do .size or whatever
         return 9 //placeholder so I can run
