@@ -18,15 +18,13 @@
 		8D4D7E381D184AF700366346 /* TrackerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4D7E361D184AF700366346 /* TrackerTableViewCell.xib */; };
 		8D4D7E3B1D18835400366346 /* TrackerDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7E391D18835400366346 /* TrackerDateViewController.swift */; };
 		8D4D7E3C1D18835400366346 /* TrackerDateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4D7E3A1D18835400366346 /* TrackerDateViewController.xib */; };
-		8D4D7E3F1D18A70B00366346 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7E3E1D18A70B00366346 /* Day.swift */; };
-		8D4D7E411D18A94800366346 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7E401D18A94800366346 /* Exercise.swift */; };
+		8D4D7E411D18A94800366346 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7E401D18A94800366346 /* Workout.swift */; };
 		8D4D7E671D19436E00366346 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7E661D19436E00366346 /* PersistenceManager.swift */; };
 		8D4D7E6C1D194D3300366346 /* SpotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7E6A1D194D3300366346 /* SpotifyViewController.swift */; };
 		8D4D7E6D1D194D3300366346 /* SpotifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4D7E6B1D194D3300366346 /* SpotifyViewController.xib */; };
 		8D4D7EDE1D1967D600366346 /* MotivateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7EDC1D1967D600366346 /* MotivateViewController.swift */; };
 		8D4D7EDF1D1967D600366346 /* MotivateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4D7EDD1D1967D600366346 /* MotivateViewController.xib */; };
-		8D4D7EE51D199BEE00366346 /* ExercisesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7EE41D199BEE00366346 /* ExercisesController.swift */; };
-		8D4D7EE91D199C4F00366346 /* DayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7EE81D199C4F00366346 /* DayController.swift */; };
+		8D4D7EE51D199BEE00366346 /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7EE41D199BEE00366346 /* WorkoutController.swift */; };
 		8D4D7EED1D19E49000366346 /* TrackerValidatedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7EEC1D19E49000366346 /* TrackerValidatedTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,15 +42,13 @@
 		8D4D7E361D184AF700366346 /* TrackerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackerTableViewCell.xib; sourceTree = "<group>"; };
 		8D4D7E391D18835400366346 /* TrackerDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerDateViewController.swift; sourceTree = "<group>"; };
 		8D4D7E3A1D18835400366346 /* TrackerDateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackerDateViewController.xib; sourceTree = "<group>"; };
-		8D4D7E3E1D18A70B00366346 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
-		8D4D7E401D18A94800366346 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		8D4D7E401D18A94800366346 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		8D4D7E661D19436E00366346 /* PersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersistenceManager.swift; path = ../PersistenceManager.swift; sourceTree = "<group>"; };
 		8D4D7E6A1D194D3300366346 /* SpotifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyViewController.swift; sourceTree = "<group>"; };
 		8D4D7E6B1D194D3300366346 /* SpotifyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpotifyViewController.xib; sourceTree = "<group>"; };
 		8D4D7EDC1D1967D600366346 /* MotivateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotivateViewController.swift; sourceTree = "<group>"; };
 		8D4D7EDD1D1967D600366346 /* MotivateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotivateViewController.xib; sourceTree = "<group>"; };
-		8D4D7EE41D199BEE00366346 /* ExercisesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesController.swift; sourceTree = "<group>"; };
-		8D4D7EE81D199C4F00366346 /* DayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayController.swift; sourceTree = "<group>"; };
+		8D4D7EE41D199BEE00366346 /* WorkoutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
 		8D4D7EEC1D19E49000366346 /* TrackerValidatedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerValidatedTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,10 +111,8 @@
 		8D4D7E3D1D18A67100366346 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8D4D7E3E1D18A70B00366346 /* Day.swift */,
-				8D4D7EE81D199C4F00366346 /* DayController.swift */,
-				8D4D7E401D18A94800366346 /* Exercise.swift */,
-				8D4D7EE41D199BEE00366346 /* ExercisesController.swift */,
+				8D4D7E401D18A94800366346 /* Workout.swift */,
+				8D4D7EE41D199BEE00366346 /* WorkoutController.swift */,
 			);
 			name = Models;
 			path = ..;
@@ -248,14 +242,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D4D7EE91D199C4F00366346 /* DayController.swift in Sources */,
 				8D4D7E371D184AF700366346 /* TrackerTableViewCell.swift in Sources */,
 				8D4D7E151D17F5AC00366346 /* TrackerViewController.swift in Sources */,
-				8D4D7E3F1D18A70B00366346 /* Day.swift in Sources */,
 				8D4D7EDE1D1967D600366346 /* MotivateViewController.swift in Sources */,
-				8D4D7EE51D199BEE00366346 /* ExercisesController.swift in Sources */,
+				8D4D7EE51D199BEE00366346 /* WorkoutController.swift in Sources */,
 				8D4D7E671D19436E00366346 /* PersistenceManager.swift in Sources */,
-				8D4D7E411D18A94800366346 /* Exercise.swift in Sources */,
+				8D4D7E411D18A94800366346 /* Workout.swift in Sources */,
 				8D4D7EED1D19E49000366346 /* TrackerValidatedTextField.swift in Sources */,
 				8D4D7E101D17E89E00366346 /* LandingViewController.swift in Sources */,
 				8D4D7E3B1D18835400366346 /* TrackerDateViewController.swift in Sources */,

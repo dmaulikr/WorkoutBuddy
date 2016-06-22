@@ -8,18 +8,18 @@
 
 import Foundation
 
-class ExercisesController {
+class WorkoutController {
     
-    var arrayOfExercises : [Exercise] = []
+    var arrayOfWorkouts : [Workout] = []
     
-    class var sharedInstance: ExercisesController {
+    class var sharedInstance: WorkoutController {
         struct Static {
-            static var instance:ExercisesController?
+            static var instance:WorkoutController?
             static var token: dispatch_once_t = 0
         }
         
         dispatch_once(&Static.token)    {
-            Static.instance = ExercisesController()
+            Static.instance = WorkoutController()
         }
         return Static.instance!
     }
@@ -33,11 +33,11 @@ class ExercisesController {
         //PersistenceManager.saveObject(exercise, fileName: "MyExercise")
     }
     
-    func addExercises(exercise : Exercise) {
+    func addWorkout(workout : Workout) {
         
-        arrayOfExercises.append(exercise)
+        arrayOfWorkouts.append(workout)
         
-        PersistenceManager.saveNSArray(arrayOfExercises, fileName: "arrayOfExercises")
+        PersistenceManager.saveNSArray(arrayOfWorkouts, fileName: "arrayOfWorkouts")
     }
 
     

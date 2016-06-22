@@ -51,7 +51,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ak6-JG-EuH">
-                    <rect key="frame" x="0.0" y="39" width="600" height="52"/>
+                    <rect key="frame" x="0.0" y="51" width="600" height="52"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="52" id="g5F-FM-qKY"/>
                     </constraints>
@@ -63,10 +63,10 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Ak6-JG-EuH" firstAttribute="leading" secondItem="Ph5-6j-7W4" secondAttribute="leading" id="Epl-nu-Qeu"/>
-                <constraint firstItem="Ph5-6j-7W4" firstAttribute="top" secondItem="Ak6-JG-EuH" secondAttribute="bottom" constant="-1" id="FDi-Ku-AND"/>
+                <constraint firstItem="Ph5-6j-7W4" firstAttribute="top" secondItem="Ak6-JG-EuH" secondAttribute="bottom" constant="-13" id="FDi-Ku-AND"/>
                 <constraint firstAttribute="trailing" secondItem="Ak6-JG-EuH" secondAttribute="trailing" id="Gmh-5M-jRi"/>
                 <constraint firstItem="hCB-91-Jnv" firstAttribute="leading" secondItem="G6R-JG-qPR" secondAttribute="leading" id="IqV-L6-3U7"/>
-                <constraint firstItem="Ak6-JG-EuH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="39" id="W9g-ZN-ndw"/>
+                <constraint firstItem="Ak6-JG-EuH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="51" id="W9g-ZN-ndw"/>
                 <constraint firstItem="Ak6-JG-EuH" firstAttribute="trailing" secondItem="Ph5-6j-7W4" secondAttribute="trailing" id="fph-wd-iTm"/>
                 <constraint firstItem="Ak6-JG-EuH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="guA-jA-0Xu"/>
                 <constraint firstItem="Ph5-6j-7W4" firstAttribute="trailing" secondItem="hCB-91-Jnv" secondAttribute="trailing" id="hWY-Kq-die"/>

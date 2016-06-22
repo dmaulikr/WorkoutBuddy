@@ -16,11 +16,7 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var dateLabel: UILabel!
     
-    var eTitle : String = ""
-    var eSet1 : Int = 0
-    var eSet2 : Int = 0
-    var eSet3 : Int = 0
-    var eSet4 : Int = 0
+    var workout = Workout()
     
     override func viewWillAppear(animated: Bool) {
         tableView.reloadData()
@@ -43,16 +39,37 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         self.navigationController!.navigationBar.hidden = false
         
-        tableView.registerNib(UINib(nibName: "TrackerTableViewCell", bundle: nil), forCellReuseIdentifier: "TrackerTableViewCell")
-
         
-        setDate()
+        let dateForLabel = NSDateFormatter.localizedStringFromDate(workout.date, dateStyle: NSDateFormatterStyle.FullStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
+        self.dateLabel.text = dateForLabel
+
+    //    self.dateLabel.text = workout.date.description
+        
+        tableView.registerNib(UINib(nibName: "TrackerTableViewCell", bundle: nil), forCellReuseIdentifier: "TrackerTableViewCell")
+        
+        
+//        //create an instance of UIRotationGestureRecognizer
+//        let leftSwipe : UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action:#selector(TrackerViewController.handleSwipe(_:)))
+//        self.view.addGestureRecognizer(leftSwipe)
+//        
+        //setDate()
     }
     
 //    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool { // return NO to not change text
 //            return true
 //    }
 
+//    func handleSwipe() {
+//        
+//        print("Rotate recognized")
+//        self.view.transform = CGAffineTransformMake
+//        if (sender!.state == UIGestureRecognizerState.Ended) {
+//            
+//            print("rotation \(sender!.swipe)")
+//            
+//        }
+//        
+//    }
     @IBAction func listenButtonTapped(sender: UIButton) {
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate //as! casts this returned value to type AppDelegate
         
@@ -64,62 +81,77 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Dispose of any resources that can be recreated.
     }
     
-    func setDate() {
-        let tdvc = TrackerDateViewController()
-        var date = tdvc.getDate()
-        
-        dateLabel.text = date
-        
-    }
+//    func setDate() {
+//        let tdvc = TrackerDateViewController()
+//        var date = tdvc.getDate()
+//        
+//        dateLabel.text = date
+//        
+//    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         var cell = tableView.dequeueReusableCellWithIdentifier("TrackerTableViewCell", forIndexPath: indexPath) as? TrackerTableViewCell
         if (cell == nil)    {
             cell = TrackerTableViewCell()
         }
         
-        eTitle = (cell?.setOneTextField.text)!
+        //eTitle = (cell?.setOneTextField.text)!
         
-        print(eTitle)
+        //print(eTitle)
         //eSet1 = cell?.
         
         print(cell)
         return cell!
     }
+    
     @IBAction func iWorkedHardButtonTapped(sender: UIButton) {
         //package the exercises up in an array to be shipped off the the exercises controller
         
-        var exercise = Exercise()
-    
+        //var workout = Workout()
         for index in 1...9  {
+            
             let indexPath:NSIndexPath = NSIndexPath(forRow: index, inSection: 1)
             let cell = tableView.cellForRowAtIndexPath(indexPath) as! TrackerTableViewCell
             
             
             
-            let indexEndOfText = cell.setOneTextField.text!.endIndex.advancedBy(-2) //this should get a substring of the weight for setOne CHECK FOR THE HYPHEN
-            let indexStartOfText = cell.setOneTextField.text!.startIndex.advancedBy(4) //this should get a substring of the rep for setOne hopefully skipping over the -
-            exercise.reps = (Int((cell.setOneTextField.text?.substringFromIndex(indexStartOfText))!))!
-            print(exercise.reps)
-            exercise.weight = (Int((cell.setTwoTextField.text?.substringToIndex(indexEndOfText))!))!
-            print(exercise.weight)
             
-            let indexEndOfText2 = cell.setOneTextField.text!.endIndex.advancedBy(-2) //this should get a substring of the weight for setOne
-            let indexStartOfText2 = cell.setOneTextField.text!.startIndex.advancedBy(4) //this should get a substring of the rep for setOne hopefully skipping over the -
-            exercise.setTwoWeight = (Int((cell.setTwoTextField.text?.substringToIndex(indexEndOfText2))!))!
-            exercise.setTwoReps = (Int((cell.setTwoTextField.text?.substringFromIndex(indexStartOfText2))!))!
             
-            let indexEndOfText3 = cell.setThreeTextField.text!.endIndex.advancedBy(-2) //this should get a substring of the weight for setOne
-            let indexStartOfText3 = cell.setThreeTextField.text!.startIndex.advancedBy(4) //this should get a substring of the rep for setOne hopefully skipping over the -
-            exercise.setThreeWeight = (Int((cell.setThreeTextField.text?.substringToIndex(indexEndOfText3))!))!
-            exercise.setThreeReps = (Int((cell.setThreeTextField.text?.substringFromIndex(indexStartOfText3))!))!
-            
-            let indexEndOfText4 = cell.setFourTextField.text!.endIndex.advancedBy(-2) //this should get a substring of the weight for setOne
-            let indexStartOfText4 = cell.setFourTextField.text!.startIndex.advancedBy(4) //this should get a substring of the rep for setOne hopefully skipping over the -
-            exercise.setFourWeight = (Int((cell.setFourTextField.text?.substringToIndex(indexEndOfText4))!))!
-            exercise.setFourReps = (Int((cell.setFourTextField.text?.substringFromIndex(indexStartOfText4))!))!
-
-
+//            let indexEndOfText = cell.setOneTextField.text!.endIndex.advancedBy(-2) //this should get a substring of the weight for setOne CHECK FOR THE HYPHEN
+//            let indexStartOfText = cell.setOneTextField.text!.startIndex.advancedBy(4) //this should get a substring of the rep for setOne hopefully skipping over the -
+//            
+//            exercise.reps = (Int((cell.setOneTextField.text?.substringFromIndex(indexStartOfText))!))!
+//            let reps = exercise.reps
+//            print(reps)
+//            exercise.weight = (Int((cell.setTwoTextField.text?.substringToIndex(indexEndOfText))!))!
+//            let weight = exercise.weight
+//            print(weight)
+//
+//            let indexEndOfText2 = cell.setOneTextField.text!.endIndex.advancedBy(-2) //this should get a substring of the weight for setOne
+//            let indexStartOfText2 = cell.setOneTextField.text!.startIndex.advancedBy(4) //this should get a substring of the rep for setOne hopefully skipping over the -
+//            exercise.setTwoWeight = (Int((cell.setTwoTextField.text?.substringToIndex(indexEndOfText2))!))!
+//            let setTwoWeight = exercise.setTwoWeight
+//            exercise.setTwoReps = (Int((cell.setTwoTextField.text?.substringFromIndex(indexStartOfText2))!))!
+//            let setTwoReps = exercise.setTwoWeight
+//            
+//            let indexEndOfText3 = cell.setThreeTextField.text!.endIndex.advancedBy(-2) //this should get a substring of the weight for setOne
+//            let indexStartOfText3 = cell.setThreeTextField.text!.startIndex.advancedBy(4) //this should get a substring of the rep for setOne hopefully skipping over the -
+//            exercise.setThreeWeight = (Int((cell.setThreeTextField.text?.substringToIndex(indexEndOfText3))!))!
+//            let setThreeWeight = exercise.setThreeWeight
+//            exercise.setThreeReps = (Int((cell.setThreeTextField.text?.substringFromIndex(indexStartOfText3))!))!
+//            let setThreeReps = exercise.setTwoReps
+//            
+//            let indexEndOfText4 = cell.setFourTextField.text!.endIndex.advancedBy(-2) //this should get a substring of the weight for setOne
+//            let indexStartOfText4 = cell.setFourTextField.text!.startIndex.advancedBy(4) //this should get a substring of the rep for setOne hopefully skipping over the -
+//            exercise.setFourWeight = (Int((cell.setFourTextField.text?.substringToIndex(indexEndOfText4))!))!
+//            let setFourWeight = exercise.setFourWeight
+//            exercise.setFourReps = (Int((cell.setFourTextField.text?.substringFromIndex(indexStartOfText4))!))!
+//            let setFourReps = exercise.setFourReps
+//            
+//            
+//            exercise = Exercise(title: title!, weight: weight, reps: reps, setTwoWeight: setTwoWeight, setTwoReps: setTwoReps, setThreeReps: setThreeReps, setThreeWeight: setThreeWeight, setFourReps: setFourReps, setFourWeight: setFourWeight)
+//
             
         }
         

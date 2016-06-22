@@ -17,7 +17,8 @@ class TrackerDateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationController?.navigationBarHidden = true
+        //navigationController?.navigationBarHidden = true
+        navigationController?.hidesBarsOnSwipe = true
         // Do any additional setup after loading the view.
         
     }
@@ -34,13 +35,17 @@ class TrackerDateViewController: UIViewController {
     
     }
     
-    func getDate() -> String {
-//        return dateLabel.text!
-        return "so"
-    }
+//    func getDate() -> String {
+//        
+//        return NSDateFormatter.localizedStringFromDate(myDatePicker.date, dateStyle: NSDateFormatterStyle.FullStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
+//
+//  
+//    }
     
     @IBAction func goButtonTapped(sender: UIButton) {
         let tvc = TrackerViewController(nibName: "TrackerViewController", bundle: nil)
+        tvc.workout = Workout()
+        tvc.workout.date = myDatePicker.date
         navigationController?.pushViewController(tvc, animated: true)
     }
 

@@ -46,17 +46,16 @@ class TrackerValidatedTextField: UITextField , UITextFieldDelegate {
         
     }
     
-//    func updateUI () {
-//        
-//        if (valid()){
-//            imageView.image = UIImage (named : "input_valid")
-//        } else {
-//            imageView.image = UIImage (named : "input_invalid")
-//        }
-//    }
-    func validate() -> Bool {
-        //updateUI()
+
+    func checkValid() {
         
+        if (valid()){
+            print("valid input")
+        }
+     
+    }
+    func validate() -> Bool {
+        checkValid()
         
         return self.valid()
     }

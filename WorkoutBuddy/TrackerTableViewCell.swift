@@ -10,10 +10,8 @@ import UIKit
 
 class TrackerTableViewCell: UITableViewCell, UITextInputTraits {
 
-    @IBOutlet weak var setOneTextField: UITextField!
-    @IBOutlet weak var setTwoTextField: UITextField!
-    @IBOutlet weak var setThreeTextField: UITextField!
-    @IBOutlet weak var setFourTextField: UITextField!
+   
+    @IBOutlet weak var activityTextField: UITextField!
     @IBOutlet weak var titleTextField: UITextField!
     
     //optional var keyboardType: UIKeyboardType
@@ -30,10 +28,6 @@ class TrackerTableViewCell: UITableViewCell, UITextInputTraits {
         super.awakeFromNib()
         // Initialization code
         
-        setOneTextField.keyboardType = UIKeyboardType.DecimalPad
-        setTwoTextField.keyboardType = UIKeyboardType.DecimalPad
-        setThreeTextField.keyboardType = UIKeyboardType.DecimalPad
-        setFourTextField.keyboardType = UIKeyboardType.DecimalPad
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -58,4 +52,6 @@ class TrackerTableViewCell: UITableViewCell, UITextInputTraits {
 //    func setUpCell(exercise : Exercise) {
 //      //I don't need to pass in exersises... The user will input them here
 //    }
+    
+    
 }
