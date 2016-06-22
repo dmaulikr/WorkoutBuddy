@@ -30,10 +30,10 @@ class TrackerTableViewCell: UITableViewCell, UITextInputTraits {
         super.awakeFromNib()
         // Initialization code
         
-        setOneTextField.keyboardType = UIKeyboardType.NumberPad
-        setTwoTextField.keyboardType = UIKeyboardType.NumberPad
-        setThreeTextField.keyboardType = UIKeyboardType.NumberPad
-        setFourTextField.keyboardType = UIKeyboardType.NumberPad
+        setOneTextField.keyboardType = UIKeyboardType.DecimalPad
+        setTwoTextField.keyboardType = UIKeyboardType.DecimalPad
+        setThreeTextField.keyboardType = UIKeyboardType.DecimalPad
+        setFourTextField.keyboardType = UIKeyboardType.DecimalPad
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

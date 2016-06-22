@@ -40,7 +40,7 @@ class TrackerValidatedTextField: UITextField , UITextFieldDelegate {
     func valid() -> Bool {
         print ("Validaing email: \(self.text!)")
         
-        let exerciseRegEx = "{3}[0-9]+-{1,2}[0-9]"
+        let exerciseRegEx = "[0-9]{3}.[0-9]{1,2}"
         let exerciseTest = NSPredicate(format:"SELF MATCHES %@", exerciseRegEx)
         return exerciseTest.evaluateWithObject(self.text!)
         
@@ -56,6 +56,7 @@ class TrackerValidatedTextField: UITextField , UITextFieldDelegate {
 //    }
     func validate() -> Bool {
         //updateUI()
+        
         
         return self.valid()
     }
