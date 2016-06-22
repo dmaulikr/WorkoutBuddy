@@ -16,6 +16,8 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var dateLabel: UILabel!
     
+    var arrayOfExercises : [String] = []
+    var arrayOfTitles : [String] = []
     var workout = Workout()
     
     override func viewWillAppear(animated: Bool) {
@@ -96,11 +98,6 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell = TrackerTableViewCell()
         }
         
-        //eTitle = (cell?.setOneTextField.text)!
-        
-        //print(eTitle)
-        //eSet1 = cell?.
-        
         print(cell)
         return cell!
     }
@@ -109,13 +106,40 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
         //package the exercises up in an array to be shipped off the the exercises controller
         
         //var workout = Workout()
-        for index in 1...9  {
+//        for index in 1...9  {
+//            
+//            let indexPath:NSIndexPath = NSIndexPath(forRow: index, inSection: 1)
+//            let cell = tableView.cellForRowAtIndexPath(indexPath) as! TrackerTableViewCell
+//            
+//            workout.title = cell.titleTextField.text!
+//            workout.exercises = cell.activityTextField.text
+//            
+
+        //var arrayOfNames : [String] = [String]()
+        var tmpArrOfTit : [String] = []
+        var tmpArrOfEx : [String] = []
+        for i in 0 ..< 10 { //be sure to keep the number of cells the same even though it's sort of cheating
+            let indexPath = NSIndexPath(forRow:i, inSection:0)
+            let cell : TrackerTableViewCell? = self.tableView.cellForRowAtIndexPath(indexPath) as! TrackerTableViewCell?
+            if let item = cell?.titleTextField.text {
+                if (item.characters.count > 0) {
+                tmpArrOfTit.append(item)
+                }
+            }
+            if let item = cell?.activityTextField.text {
+                if (item.characters.count > 0) {
+                tmpArrOfEx.append(item)
+                }
+            }
+        }
+        
+            arrayOfTitles = tmpArrOfTit
+            arrayOfExercises = tmpArrOfEx
             
-            let indexPath:NSIndexPath = NSIndexPath(forRow: index, inSection: 1)
-            let cell = tableView.cellForRowAtIndexPath(indexPath) as! TrackerTableViewCell
-            
-            
-            
+        print("This is the arrayOfExercises: \(arrayOfExercises)")
+        print("This is the arrayOfTitles\(arrayOfTitles)")
+
+        
             
             
 //            let indexEndOfText = cell.setOneTextField.text!.endIndex.advancedBy(-2) //this should get a substring of the weight for setOne CHECK FOR THE HYPHEN
@@ -153,13 +177,17 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
 //            exercise = Exercise(title: title!, weight: weight, reps: reps, setTwoWeight: setTwoWeight, setTwoReps: setTwoReps, setThreeReps: setThreeReps, setThreeWeight: setThreeWeight, setFourReps: setFourReps, setFourWeight: setFourWeight)
 //
             
-        }
-        
-        //exercise.title = eTitle
-        
-        //ExercisesController.sharedInstance.addExercises(exercise)
     }
     
+    
+    func getArrayOfExercises() -> [String] {
+        print("arrayOfExercises from getArrayOfExercises() \(self.arrayOfExercises)")
+        return arrayOfExercises
+    }
+    func getArrayOfTitles() -> [String] {
+        print("arrayOfTitles from getArrayOfTitles() \(self.arrayOfTitles)")
+        return arrayOfTitles
+    }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //create an object for the tableview and do .size or whatever
@@ -178,16 +206,4 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true //easy peasy
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
