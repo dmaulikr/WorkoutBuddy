@@ -11,6 +11,7 @@ import Foundation
 class WorkoutController {
     
     var arrayOfWorkouts : [Workout] = []
+    var wcArrayOfExercises : [String] = []
     
     class var sharedInstance: WorkoutController {
         struct Static {
@@ -33,10 +34,13 @@ class WorkoutController {
         //PersistenceManager.saveObject(exercise, fileName: "MyExercise")
     }
     
+    func createExercise() {
+        
+    }
+    
     func addWorkout(workout : Workout) {
         
         arrayOfWorkouts.append(workout)
-        
         PersistenceManager.saveNSArray(arrayOfWorkouts, fileName: "arrayOfWorkouts")
     }
 

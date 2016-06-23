@@ -20,6 +20,19 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
     var arrayOfTitles : [String] = []
     var workout = Workout()
     
+    class var sharedInstance: TrackerViewController {
+        struct Static {
+            static var instance:TrackerViewController?
+            static var token: dispatch_once_t = 0
+        }
+        
+        dispatch_once(&Static.token)    {
+            Static.instance = TrackerViewController()
+        }
+        return Static.instance!
+    }
+
+    
     override func viewWillAppear(animated: Bool) {
         tableView.reloadData()
     }
@@ -53,8 +66,7 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
 //        //create an instance of UIRotationGestureRecognizer
 //        let leftSwipe : UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action:#selector(TrackerViewController.handleSwipe(_:)))
 //        self.view.addGestureRecognizer(leftSwipe)
-//        
-        //setDate()
+//
     }
     
 //    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool { // return NO to not change text
@@ -83,14 +95,6 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Dispose of any resources that can be recreated.
     }
     
-//    func setDate() {
-//        let tdvc = TrackerDateViewController()
-//        var date = tdvc.getDate()
-//        
-//        dateLabel.text = date
-//        
-//    }
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("TrackerTableViewCell", forIndexPath: indexPath) as? TrackerTableViewCell
@@ -116,6 +120,8 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
 //            
 
         //var arrayOfNames : [String] = [String]()
+        
+        
         var tmpArrOfTit : [String] = []
         var tmpArrOfEx : [String] = []
         for i in 0 ..< 10 { //be sure to keep the number of cells the same even though it's sort of cheating
@@ -133,9 +139,24 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
         }
         
-            arrayOfTitles = tmpArrOfTit
-            arrayOfExercises = tmpArrOfEx
+        arrayOfTitles = tmpArrOfTit
+        arrayOfExercises = tmpArrOfEx
+        
+        let workout = Workout()
+
+        for i in 0..<arrayOfExercises.count {
             
+            var titleAndExercise : String = ""
+            
+            if (arrayOfExercises[i].characters.count > 0 &&  arrayOfTitles[i].characters.count > 0) {
+                
+                titleAndExercise =  "\(arrayOfTitles[i]) ,\(arrayOfExercises[i])"
+                
+            }
+            workout.exercises.append(titleAndExercise)
+        }
+        
+
         print("This is the arrayOfExercises: \(arrayOfExercises)")
         print("This is the arrayOfTitles\(arrayOfTitles)")
 

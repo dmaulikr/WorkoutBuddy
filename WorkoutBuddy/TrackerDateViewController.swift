@@ -46,6 +46,8 @@ class TrackerDateViewController: UIViewController {
         let tvc = TrackerViewController(nibName: "TrackerViewController", bundle: nil)
         tvc.workout = Workout()
         tvc.workout.date = myDatePicker.date
+        
+        
         navigationController?.pushViewController(tvc, animated: true)
     }
 
