@@ -41,7 +41,7 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         workButton.backgroundColor = UIColor.init(red: 0.173, green: 0.431, blue: 0.522, alpha: 1.0)
         //(red: 0.5, green: 0.5, blue: 2.0, alpha: 1.0)
-        navigationController?.navigationBarHidden = true
+        navigationController?.navigationBarHidden = false
         // Do any additional setup after loading the view.
         
         tableView.delegate = self
@@ -52,10 +52,12 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         self.tableView.registerClass(TrackerTableViewCell.self, forCellReuseIdentifier: "TrackerTableViewCell")
         
-        self.navigationController!.navigationBar.hidden = false
+        //self.navigationController!.navigationBar.hidden = false
         
         
-        let dateForLabel = NSDateFormatter.localizedStringFromDate(workout.date, dateStyle: NSDateFormatterStyle.FullStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
+        //let dateForLabel = NSDateFormatter.localizedStringFromDate(workout.date, dateStyle: NSDateFormatterStyle.FullStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
+        
+        let dateForLabel = workout.date
         self.dateLabel.text = dateForLabel
 
     //    self.dateLabel.text = workout.date.description
@@ -142,7 +144,7 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
         arrayOfTitles = tmpArrOfTit
         arrayOfExercises = tmpArrOfEx
         
-        let workout = Workout()
+//        let workout = Workout()
 
         for i in 0..<arrayOfExercises.count {
             
@@ -154,6 +156,7 @@ class TrackerViewController: UIViewController, UITableViewDelegate, UITableViewD
                 
             }
             workout.exercises.append(titleAndExercise)
+            WorkoutController.sharedInstance.addWorkout(workout)
         }
         
 

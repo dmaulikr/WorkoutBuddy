@@ -27,7 +27,8 @@
                         <constraint firstAttribute="width" constant="200" id="9fQ-Wk-KL7"/>
                         <constraint firstAttribute="height" constant="50" id="CzC-JH-qRd"/>
                     </constraints>
-                    <state key="normal" title="Listen">
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                    <state key="normal" title="LISTEN">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -40,7 +41,8 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="nlA-iU-VAY"/>
                     </constraints>
-                    <state key="normal" title="Work">
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                    <state key="normal" title="WORK">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
@@ -50,7 +52,8 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="ucw-E8-Wwr"/>
                     </constraints>
-                    <state key="normal" title="Motivate">
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                    <state key="normal" title="MOTIVATE">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
@@ -70,6 +73,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgE-Se-U7s">
                     <rect key="frame" x="0.0" y="520" width="600" height="30"/>
                     <color key="backgroundColor" red="0.31157612220000003" green="0.1470715306" blue="0.4087017952" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                     <state key="normal" title="I WORKED HARD">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>

@@ -26,6 +26,7 @@
 		8D4D7EDF1D1967D600366346 /* MotivateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4D7EDD1D1967D600366346 /* MotivateViewController.xib */; };
 		8D4D7EE51D199BEE00366346 /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7EE41D199BEE00366346 /* WorkoutController.swift */; };
 		8D4D7EED1D19E49000366346 /* TrackerValidatedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7EEC1D19E49000366346 /* TrackerValidatedTextField.swift */; };
+		8D4D7F2D1D1BE8D900366346 /* DateCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D7F2C1D1BE8D900366346 /* DateCompare.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		8D4D7EDD1D1967D600366346 /* MotivateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotivateViewController.xib; sourceTree = "<group>"; };
 		8D4D7EE41D199BEE00366346 /* WorkoutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
 		8D4D7EEC1D19E49000366346 /* TrackerValidatedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerValidatedTextField.swift; sourceTree = "<group>"; };
+		8D4D7F2C1D1BE8D900366346 /* DateCompare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCompare.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			children = (
 				8D4D7DFC1D17E7E800366346 /* AppDelegate.swift */,
 				8D4D7E661D19436E00366346 /* PersistenceManager.swift */,
+				8D4D7F2C1D1BE8D900366346 /* DateCompare.swift */,
 				8D4D7E031D17E7E800366346 /* Assets.xcassets */,
 				8D4D7E051D17E7E800366346 /* LaunchScreen.storyboard */,
 				8D4D7E081D17E7E800366346 /* Info.plist */,
@@ -247,6 +250,7 @@
 				8D4D7EDE1D1967D600366346 /* MotivateViewController.swift in Sources */,
 				8D4D7EE51D199BEE00366346 /* WorkoutController.swift in Sources */,
 				8D4D7E671D19436E00366346 /* PersistenceManager.swift in Sources */,
+				8D4D7F2D1D1BE8D900366346 /* DateCompare.swift in Sources */,
 				8D4D7E411D18A94800366346 /* Workout.swift in Sources */,
 				8D4D7EED1D19E49000366346 /* TrackerValidatedTextField.swift in Sources */,
 				8D4D7E101D17E89E00366346 /* LandingViewController.swift in Sources */,

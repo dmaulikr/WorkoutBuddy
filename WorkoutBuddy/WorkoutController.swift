@@ -34,15 +34,32 @@ class WorkoutController {
         //PersistenceManager.saveObject(exercise, fileName: "MyExercise")
     }
     
-    func createExercise() {
+    func createOneExerciseSoIDontGetNilInDateVC() -> Workout {
         
+        //let currentDate = NSDate()
+        let firstThrowAwayInstanceWorkout = Workout()
+        firstThrowAwayInstanceWorkout.date = "1995-11-03"
+        firstThrowAwayInstanceWorkout.exercises = ["one" , "two"]
+        
+        return firstThrowAwayInstanceWorkout
     }
     
     func addWorkout(workout : Workout) {
-        
+        arrayOfWorkouts.append(self.createOneExerciseSoIDontGetNilInDateVC())
+        //PersistenceManager.saveObject(arrayOfWorkouts, fileName: "arrayOfWorkouts")
         arrayOfWorkouts.append(workout)
-        PersistenceManager.saveNSArray(arrayOfWorkouts, fileName: "arrayOfWorkouts")
+        PersistenceManager.saveObject(arrayOfWorkouts, fileName: "arrayOfWorkouts")
     }
 
+    func getWorkout() -> [Workout] {
+        if let checkExercises : [Workout] = PersistenceManager.loadObject("arrayOfWorkouts") as? [Workout] {
+            
+            return checkExercises
+            
+        } else {
+            return []
+        }
+
+    }
     
 }

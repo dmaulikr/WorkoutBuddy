@@ -21,6 +21,9 @@ class TrackerDateViewController: UIViewController {
         navigationController?.hidesBarsOnSwipe = true
         // Do any additional setup after loading the view.
         
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .MediumStyle
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +34,7 @@ class TrackerDateViewController: UIViewController {
     
     @IBAction func lockInButtonTapped(sender: UIButton) {
         
-         dateLabel.text = NSDateFormatter.localizedStringFromDate(myDatePicker.date, dateStyle: NSDateFormatterStyle.FullStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
+         dateLabel.text = NSDateFormatter.localizedStringFromDate(myDatePicker.date, dateStyle: NSDateFormatterStyle.MediumStyle, timeStyle: NSDateFormatterStyle.NoStyle)
     
     }
     
@@ -44,9 +47,33 @@ class TrackerDateViewController: UIViewController {
     
     @IBAction func goButtonTapped(sender: UIButton) {
         let tvc = TrackerViewController(nibName: "TrackerViewController", bundle: nil)
-        tvc.workout = Workout()
-        tvc.workout.date = myDatePicker.date
         
+        tvc.workout = Workout()
+        
+        let date : String = NSDateFormatter.localizedStringFromDate(myDatePicker.date, dateStyle: NSDateFormatterStyle.MediumStyle, timeStyle: NSDateFormatterStyle.NoStyle)
+        
+        let checkWorkout = WorkoutController.sharedInstance.getWorkout()
+        
+        for items in checkWorkout {
+            print(items.date)
+            print(myDatePicker.date)
+            if (items.date == date) {
+                tvc.dateLabel.text = tvc.workout.date
+                tvc.arrayOfExercises = items.exercises
+            }
+            else {
+                
+                tvc.workout.date = date
+            }
+        }
+        
+//        if(checkExercises.contains(myDatePicker.date)) {
+//            fetch workout for relevant date and set workout for TVC
+//        } else {
+//            tvc.workout = Workout()
+//            tvc.workout.date = myDatePicker.date
+//
+//        }
         
         navigationController?.pushViewController(tvc, animated: true)
     }

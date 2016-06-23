@@ -10,30 +10,29 @@ import Foundation
 
 class Workout : NSObject, NSCoding {
     
-    var date : NSDate
+    var date : String!
     var exercises : [String]
     
-    required init(date: NSDate? , exercises : [String]) {
+    required init(date: String! , exercises : [String]) {
         self.exercises = exercises
-        self.date = date!
-
+        self.date = date
     }
+    
+    override init() {
+        date = ""
+        exercises = []
+    }
+    
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(self.date, forKey: "date")
         aCoder.encodeObject(self.exercises, forKey: "exercises")
-
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
-        let date = aDecoder.decodeObjectForKey("date") as? NSDate
+        let date = aDecoder.decodeObjectForKey("date") as? String
         let exercises = aDecoder.decodeObjectForKey("exercises") as? [String]
         
         self.init(date : date, exercises: exercises!)
-    }
-
-    override init() {
-        date = NSDate()
-        exercises = []
     }
 
  
